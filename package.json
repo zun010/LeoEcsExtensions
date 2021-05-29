@@ -1,0 +1,20 @@
+{
+    "name": "com.zun010.leoecsextensions",
+    "author": "Zun010",
+    "displayName": "LeoEcsExtensions",
+    "description": "LeoEcsExtensions is a set of extensions for the LeoECS framework, such as SystemGroups, UnityBridge, and others.",
+    "unity": "2020.3",
+    "version": "2020.3.3",
+    "keywords": [
+        "leoecs",
+        "ecs",
+        "extensions"
+    ],
+    "dependencies": {
+        "com.leopotam.ecs": "https://github.com/Leopotam/ecs.git#develop"
+    },
+    "repository": {
+        "type": "git",
+        "url": "hhttps://github.com/zun010/LeoEcsExtensions.git"
+    }
+}

@@ -1,0 +1,16 @@
+{
+    "name": "Zun010.LeoEcsExtensions",
+    "rootNamespace": "",
+    "references": [
+        "Leopotam.Ecs"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
