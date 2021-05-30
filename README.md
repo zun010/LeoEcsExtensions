@@ -5,7 +5,82 @@ LeoEcsExtensions is a set of extensions for the LeoECS framework, such as System
 todo
 
 # ExtensionMethods
-todo
+#### EcsEntity NewEntityWith&lt;T&gt;(this EcsWorld world)
+
+This method creates a new entity with a component of type T. This method calls the `EcsEntity.Get<T>()` method. This can be useful when you need to create an entity with a single tag component that does not contain any data inside. 
+For example:
+```c#
+var entity = _world.NewEntityWith<RequestCreateEnemyTag>();
+```
+<br>
+
+#### EcsEntity NewEntityWith&lt;T&gt;(this EcsWorld world, T component)
+This method creates a new entity with the component passed through the parameter. This method calls the `EcsEntity.Replace()` method. This can be used when you need to create a new entity, with a single component containing some data.
+For example:
+```c#
+var requestComponent = new RequestCreateEnemyWithDataComponent
+{
+    Name = "Enemy",
+    Health = 100,
+    BehaviourType = EnemyBehaviourType.Agressive
+};
+var entity = _world.NewEntityWith(requestComponent);
+```
+
+#### void ForEachEntity(this EcsFilter filter, Action&lt;EcsEntity&gt; action)
+This method executes the Action passed through the parameter for each entity from the filter. For example:
+```c#
+public sealed class ExampleSystem : IEcsRunSystem
+{
+    private readonly EcsFilter<DestroyEnemyTag> _destroyEnemyFilter = null;
+    
+    private readonly Action<EcsEntity> _destroyEnemyAction = 
+        entity => enemy.Destroy();
+    
+    public void Run()
+    {
+        if (_destroyEnemyFilter.IsEmpty())
+            return;
+    
+        _destroyEnemyFilter.ForEachEntity(_destroyEnemyAction);
+    }
+}
+```
+
+#### void ForAllFirstComponent&lt;T&gt;(this EcsFilter&lt;T&gt; filter, Action&lt;T&gt; action)
+This method executes the Action passed through the parameter for each component obtained using `Get1()` from the filter. This can be useful when you need to do something with a single component in the filter.
+For example:
+```c#
+public sealed class ExampleSystem : IEcsRunSystem
+{
+    private readonly EcsWorld _world = null;
+    private readonly EcsFilter<RequestCreateEnemyWithDataComponent> _createEnemyFilter = null;
+    
+    private readonly Action<RequestCreateEnemyWithDataComponent> _createEnemyAction = 
+        enemyData =>
+        {
+            var enemyComponent = new EnemyComponent
+            {
+                Name = enemyData.Name,
+                Health = enemyData.Health,
+                BehaviourType = enemyData.BehaviourType
+            };
+
+            _world.NewEntityWith(enemyComponent);
+        };
+    
+    public void Run()
+    {
+        if (_createEnemyFilter.IsEmpty())
+            return;
+    
+        _createEnemyFilter.ForAllFirstComponent(_createEnemyAction);
+    }
+}
+```
+
+# SystemGroups
+_Coming soon..._
 
 # UnityBridge
 
