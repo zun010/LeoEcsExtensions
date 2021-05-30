@@ -14,16 +14,18 @@ namespace Zun010.UnityBridge
         {
             ecsSystems
                 .Add(new CreatePhysicsBridgeSystem())
-                .Add(new StepCollisionDetectionSystem())
-                .Add(new StepTriggerDetectionSystem());
+                .Add(new DestroyCollisionDataEntitySystem())
+                .Add(new DestroyTriggerDataEntitySystem())
+                .Add(new DestroyRaycastRequestEntitySystem())
+                .Add(new DestroyRaycastAllRequestEntitySystem());
         }
 
         public static void AddEventSystemBridgeSystemsTo(EcsSystems ecsSystems)
         {
             ecsSystems
                 .Add(new CreateEventSystemBridgeSystem())
-                .Add(new StepPointerEventsDetectionSystem())
-                .Add(new StepDragAndDropDetectionSystem());
+                .Add(new DestroyPointerEventsDataEntitySystem())
+                .Add(new DestroyDragAndDropDataEntitySystem());
         }
     }
 }

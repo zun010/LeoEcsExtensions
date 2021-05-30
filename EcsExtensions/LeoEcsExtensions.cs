@@ -23,7 +23,7 @@ namespace Zun010.LeoEcsExtensions
             return entity;
         }
 
-        public static void ForAllEntity(this EcsFilter filter, Action<EcsEntity> action)
+        public static void ForEachEntity(this EcsFilter filter, Action<EcsEntity> action)
         {
             foreach (var index in filter)
                 action(filter.GetEntity(index));
