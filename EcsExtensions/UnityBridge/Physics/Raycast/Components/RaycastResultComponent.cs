@@ -4,6 +4,6 @@ namespace Zun010.UnityBridge
 {
     public struct RaycastResultComponent
     {
-        public RaycastHit? RaycastHit;
+        public RaycastHit RaycastHit;
     }
 }
