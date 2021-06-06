@@ -8,6 +8,7 @@ namespace Zun010.UnityBridge
         {
             AddPhysicsBridgeSystemsTo(ecsSystems);
             AddEventSystemBridgeSystemsTo(ecsSystems);
+            AddMonoBehaviourEventsBridgeSystemsTo(ecsSystems);
         }
 
         public static void AddPhysicsBridgeSystemsTo(EcsSystems ecsSystems)
@@ -26,6 +27,13 @@ namespace Zun010.UnityBridge
                 .Add(new CreateEventSystemBridgeSystem())
                 .Add(new DestroyPointerEventsDataEntitySystem())
                 .Add(new DestroyDragAndDropDataEntitySystem());
+        }
+
+        public static void AddMonoBehaviourEventsBridgeSystemsTo(EcsSystems ecsSystems)
+        {
+            ecsSystems
+                .Add(new CreateMonoBehaviourEventsBridgeSystem())
+                .Add(new DestroyMouseEventsDataEntitySystem());
         }
     }
 }
