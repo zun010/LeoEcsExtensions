@@ -4,7 +4,8 @@ namespace Zun010.UnityBridge
 {
     public struct CollisionEnterEvent
     {
-        public Collider Collider;
+        public GameObject Sender;
+        public Collider OtherCollider;
         public Vector3 Impulse;
     }
 }
