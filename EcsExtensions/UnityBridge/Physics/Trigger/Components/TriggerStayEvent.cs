@@ -4,6 +4,7 @@ namespace Zun010.UnityBridge
 {
     public struct TriggerStayEvent
     {
-        public Collider Collider;
+        public GameObject Sender;
+        public Collider OtherCollider;
     }
 }

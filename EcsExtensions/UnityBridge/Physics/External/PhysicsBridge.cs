@@ -22,7 +22,7 @@ namespace Zun010.UnityBridge
             var collisionExitComponent = new CollisionExitEvent
             {
                 Sender = sender,
-                Collider = other.collider
+                OtherCollider = other.collider
             };
 
             World.NewEntityWith(collisionExitComponent);
@@ -33,7 +33,7 @@ namespace Zun010.UnityBridge
             var collisionStayComponent = new CollisionStayEvent
             {
                 Sender = sender,
-                Collider = other.collider
+                OtherCollider = other.collider
             };
 
             World.NewEntityWith(collisionStayComponent);
@@ -43,7 +43,7 @@ namespace Zun010.UnityBridge
         {
             var triggerEnterComponent = new TriggerEnterEvent
             {
-                Collider = other
+                OtherCollider = other
             };
 
             World.NewEntityWith(triggerEnterComponent);
@@ -53,7 +53,7 @@ namespace Zun010.UnityBridge
         {
             var triggerExitComponent = new TriggerExitEvent
             {
-                Collider = other
+                OtherCollider = other
             };
 
             World.NewEntityWith(triggerExitComponent);
@@ -63,7 +63,7 @@ namespace Zun010.UnityBridge
         {
             var triggerStayComponent = new TriggerStayEvent
             {
-                Collider = other
+                OtherCollider = other
             };
 
             World.NewEntityWith(triggerStayComponent);
