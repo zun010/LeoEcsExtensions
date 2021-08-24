@@ -8,7 +8,7 @@ namespace Zun010.UnityBridge
     {
         internal void PointerEnter(PointerEventData pointerEventData)
         {
-            var pointerEnterComponent = new PointerEnterComponent
+            var pointerEnterComponent = new PointerEnterEvent
             {
                 PointerEventData = pointerEventData
             };
@@ -18,7 +18,7 @@ namespace Zun010.UnityBridge
 
         internal void PointerExit(PointerEventData pointerEventData)
         {
-            var pointerExitComponent = new PointerExitComponent
+            var pointerExitComponent = new PointerExitEvent
             {
                 PointerEventData = pointerEventData
             };
@@ -28,7 +28,7 @@ namespace Zun010.UnityBridge
 
         internal void PointerDown(PointerEventData pointerEventData)
         {
-            var pointerDownComponent = new PointerDownComponent
+            var pointerDownComponent = new PointerDownEvent
             {
                 PointerEventData = pointerEventData
             };
@@ -38,7 +38,7 @@ namespace Zun010.UnityBridge
 
         internal void PointerUp(PointerEventData pointerEventData)
         {
-            var pointerUpComponent = new PointerUpComponent
+            var pointerUpComponent = new PointerUpEvent
             {
                 PointerEventData = pointerEventData
             };
@@ -48,7 +48,7 @@ namespace Zun010.UnityBridge
 
         internal void PointerClick(PointerEventData pointerEventData)
         {
-            var pointerClickComponent = new PointerClickComponent
+            var pointerClickComponent = new PointerClickEvent
             {
                 PointerEventData = pointerEventData
             };
@@ -58,7 +58,7 @@ namespace Zun010.UnityBridge
         
         internal void BeginDrag(PointerEventData pointerEventData)
         {
-            var beginDragComponent = new BeginDragComponent
+            var beginDragComponent = new BeginDragEvent
             {
                 PointerEventData = pointerEventData
             };
@@ -68,7 +68,7 @@ namespace Zun010.UnityBridge
         
         internal void EndDrag(PointerEventData pointerEventData)
         {
-            var endDragComponent = new EndDragComponent
+            var endDragComponent = new EndDragEvent
             {
                 PointerEventData = pointerEventData
             };
@@ -78,7 +78,7 @@ namespace Zun010.UnityBridge
         
         internal void Drag(PointerEventData pointerEventData)
         {
-            var dragComponent = new DragComponent
+            var dragComponent = new DragEvent
             {
                 PointerEventData = pointerEventData
             };
@@ -88,7 +88,7 @@ namespace Zun010.UnityBridge
         
         internal void Drop(PointerEventData pointerEventData)
         {
-            var dropComponent = new DropComponent
+            var dropComponent = new DropEvent
             {
                 PointerEventData = pointerEventData
             };

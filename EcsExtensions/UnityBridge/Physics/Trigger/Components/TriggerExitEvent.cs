@@ -2,9 +2,8 @@
 
 namespace Zun010.UnityBridge
 {
-    public struct CollisionEnterComponent
+    public struct TriggerExitEvent
     {
         public Collider Collider;
-        public Vector3 Impulse;
     }
 }

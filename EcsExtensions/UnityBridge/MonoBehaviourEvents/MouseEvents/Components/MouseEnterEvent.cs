@@ -2,7 +2,7 @@
 
 namespace Zun010.UnityBridge
 {
-    public struct MouseUpComponent
+    public struct MouseEnterEvent
     {
         public GameObject Sender;
     }

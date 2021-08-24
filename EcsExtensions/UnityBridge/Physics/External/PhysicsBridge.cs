@@ -7,7 +7,7 @@ namespace Zun010.UnityBridge
     {
         internal void CollisionEnter(Collision other)
         {
-            var collisionEnterComponent = new CollisionEnterComponent
+            var collisionEnterComponent = new CollisionEnterEvent
             {
                 Collider = other.collider,
                 Impulse = other.impulse
@@ -18,7 +18,7 @@ namespace Zun010.UnityBridge
 
         internal void CollisionExit(Collision other)
         {
-            var collisionExitComponent = new CollisionExitComponent
+            var collisionExitComponent = new CollisionExitEvent
             {
                 Collider = other.collider
             };
@@ -28,7 +28,7 @@ namespace Zun010.UnityBridge
 
         internal void CollisionStay(Collision other)
         {
-            var collisionStayComponent = new CollisionStayComponent
+            var collisionStayComponent = new CollisionStayEvent
             {
                 Collider = other.collider
             };
@@ -38,7 +38,7 @@ namespace Zun010.UnityBridge
 
         internal void TriggerEnter(Collider other)
         {
-            var triggerEnterComponent = new TriggerEnterComponent
+            var triggerEnterComponent = new TriggerEnterEvent
             {
                 Collider = other
             };
@@ -48,7 +48,7 @@ namespace Zun010.UnityBridge
 
         internal void TriggerExit(Collider other)
         {
-            var triggerExitComponent = new TriggerExitComponent
+            var triggerExitComponent = new TriggerExitEvent
             {
                 Collider = other
             };
@@ -58,7 +58,7 @@ namespace Zun010.UnityBridge
         
         internal void TriggerStay(Collider other)
         {
-            var triggerStayComponent = new TriggerStayComponent
+            var triggerStayComponent = new TriggerStayEvent
             {
                 Collider = other
             };

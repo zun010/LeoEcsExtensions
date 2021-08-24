@@ -2,7 +2,7 @@
 
 namespace Zun010.UnityBridge
 {
-    public struct TriggerEnterComponent
+    public struct TriggerEnterEvent
     {
         public Collider Collider;
     }

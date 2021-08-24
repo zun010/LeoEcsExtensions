@@ -2,7 +2,7 @@
 
 namespace Zun010.UnityBridge
 {
-    public struct MouseUpAsButtonComponent
+    public struct MouseExitEvent
     {
         public GameObject Sender;
     }

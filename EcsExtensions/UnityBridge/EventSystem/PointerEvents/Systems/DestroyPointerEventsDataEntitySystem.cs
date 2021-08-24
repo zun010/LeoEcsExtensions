@@ -6,11 +6,11 @@ namespace Zun010.UnityBridge
 {
     public class DestroyPointerEventsDataEntitySystem : IEcsRunSystem
     {
-        private readonly EcsFilter<PointerEnterComponent> _pointerEnterFilter = null;
-        private readonly EcsFilter<PointerExitComponent> _pointerExitFilter = null;
-        private readonly EcsFilter<PointerDownComponent> _pointerDownFilter = null;
-        private readonly EcsFilter<PointerUpComponent> _pointerUpFilter = null;
-        private readonly EcsFilter<PointerClickComponent> _pointerClickFilter = null;
+        private readonly EcsFilter<PointerEnterEvent> _pointerEnterFilter = null;
+        private readonly EcsFilter<PointerExitEvent> _pointerExitFilter = null;
+        private readonly EcsFilter<PointerDownEvent> _pointerDownFilter = null;
+        private readonly EcsFilter<PointerUpEvent> _pointerUpFilter = null;
+        private readonly EcsFilter<PointerClickEvent> _pointerClickFilter = null;
         
         private readonly Action<EcsEntity> _destroyEntityAction = 
             entity => entity.Destroy();

@@ -15,25 +15,46 @@ namespace Zun010.UnityBridge
         {
             ecsSystems
                 .Add(new CreatePhysicsBridgeSystem())
-                .Add(new DestroyCollisionDataEntitySystem())
-                .Add(new DestroyTriggerDataEntitySystem())
-                .Add(new DestroyRaycastRequestEntitySystem())
-                .Add(new DestroyRaycastAllRequestEntitySystem());
+
+                .OneFrame<CollisionEnterEvent>()
+                .OneFrame<CollisionExitEvent>()
+                .OneFrame<CollisionStayEvent>()
+
+                .OneFrame<TriggerEnterEvent>()
+                .OneFrame<TriggerExitEvent>()
+                .OneFrame<TriggerStayEvent>()
+
+                .OneFrame<RaycastRequest>()
+                .OneFrame<RaycastAllRequest>();
         }
 
         public static void AddEventSystemBridgeSystemsTo(EcsSystems ecsSystems)
         {
             ecsSystems
                 .Add(new CreateEventSystemBridgeSystem())
-                .Add(new DestroyPointerEventsDataEntitySystem())
-                .Add(new DestroyDragAndDropDataEntitySystem());
+                
+                .OneFrame<PointerEnterEvent>()
+                .OneFrame<PointerExitEvent>()
+                .OneFrame<PointerDownEvent>()
+                .OneFrame<PointerUpEvent>()
+                .OneFrame<PointerClickEvent>()
+                
+                .OneFrame<BeginDragEvent>()
+                .OneFrame<EndDragEvent>()
+                .OneFrame<DragEvent>()
+                .OneFrame<DropEvent>();
         }
 
         public static void AddMonoBehaviourEventsBridgeSystemsTo(EcsSystems ecsSystems)
         {
             ecsSystems
                 .Add(new CreateMonoBehaviourEventsBridgeSystem())
-                .Add(new DestroyMouseEventsDataEntitySystem());
+                
+                .OneFrame<MouseEnterEvent>()
+                .OneFrame<MouseExitEvent>()
+                .OneFrame<MouseDownEvent>()
+                .OneFrame<MouseUpEvent>()
+                .OneFrame<MouseUpAsButtonEvent>();
         }
     }
 }

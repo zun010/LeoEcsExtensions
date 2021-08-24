@@ -2,7 +2,7 @@
 
 namespace Zun010.UnityBridge
 {
-    public struct RaycastRequestComponent
+    public struct RaycastRequest
     {
         public Ray Ray;
         public float Distance;

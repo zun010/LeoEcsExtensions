@@ -6,9 +6,9 @@ namespace Zun010.UnityBridge
 {
     public class DestroyTriggerDataEntitySystem : IEcsRunSystem
     {
-        private readonly EcsFilter<TriggerEnterComponent> _triggerEnterFilter = null;
-        private readonly EcsFilter<TriggerExitComponent> _triggerExitFilter = null;
-        private readonly EcsFilter<TriggerStayComponent> _triggerStayFilter = null;
+        private readonly EcsFilter<TriggerEnterEvent> _triggerEnterFilter = null;
+        private readonly EcsFilter<TriggerExitEvent> _triggerExitFilter = null;
+        private readonly EcsFilter<TriggerStayEvent> _triggerStayFilter = null;
         
         private readonly Action<EcsEntity> _destroyEntityAction = 
             entity => entity.Destroy();

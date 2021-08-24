@@ -6,7 +6,7 @@ namespace Zun010.UnityBridge
 {
     public class DestroyRaycastAllRequestEntitySystem : IEcsRunSystem
     {
-        private readonly EcsFilter<RaycastAllRequestComponent> _raycastFilter = null;
+        private readonly EcsFilter<RaycastAllRequest> _raycastFilter = null;
         
         private readonly Action<EcsEntity> _destroyEntityAction = 
             entity => entity.Destroy();

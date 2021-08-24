@@ -6,11 +6,11 @@ namespace Zun010.UnityBridge
 {
     public class DestroyMouseEventsDataEntitySystem : IEcsRunSystem
     {
-        private readonly EcsFilter<MouseEnterComponent> _mouseEnterFilter = null;
-        private readonly EcsFilter<MouseExitComponent> _mouseExitFilter = null;
-        private readonly EcsFilter<MouseDownComponent> _mouseDownFilter = null;
-        private readonly EcsFilter<MouseUpComponent> _mouseUpFilter = null;
-        private readonly EcsFilter<MouseUpAsButtonComponent> _mouseUpAsButtonFilter = null;
+        private readonly EcsFilter<MouseEnterEvent> _mouseEnterFilter = null;
+        private readonly EcsFilter<MouseExitEvent> _mouseExitFilter = null;
+        private readonly EcsFilter<MouseDownEvent> _mouseDownFilter = null;
+        private readonly EcsFilter<MouseUpEvent> _mouseUpFilter = null;
+        private readonly EcsFilter<MouseUpAsButtonEvent> _mouseUpAsButtonFilter = null;
         
         private readonly Action<EcsEntity> _destroyEntityAction = 
             entity => entity.Destroy();

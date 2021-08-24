@@ -2,7 +2,7 @@
 
 namespace Zun010.UnityBridge
 {
-    public struct PointerDownComponent
+    public struct PointerDownEvent
     {
         public PointerEventData PointerEventData;
     }

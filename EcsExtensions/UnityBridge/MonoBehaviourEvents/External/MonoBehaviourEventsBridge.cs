@@ -7,7 +7,7 @@ namespace Zun010.UnityBridge
     {
         internal void MouseEnter(GameObject sender)
         {
-            var mouseEnterComponent = new MouseEnterComponent
+            var mouseEnterComponent = new MouseEnterEvent
             {
                 Sender = sender
             };
@@ -17,7 +17,7 @@ namespace Zun010.UnityBridge
         
         internal void MouseExit(GameObject sender)
         {
-            var mouseExitComponent = new MouseExitComponent
+            var mouseExitComponent = new MouseExitEvent
             {
                 Sender = sender
             };
@@ -27,7 +27,7 @@ namespace Zun010.UnityBridge
 
         internal void MouseDown(GameObject sender)
         {
-            var mouseDownComponent = new MouseDownComponent
+            var mouseDownComponent = new MouseDownEvent
             {
                 Sender = sender
             };
@@ -37,7 +37,7 @@ namespace Zun010.UnityBridge
 
         internal void MouseUp(GameObject sender)
         {
-            var mouseUpComponent = new MouseUpComponent
+            var mouseUpComponent = new MouseUpEvent
             {
                 Sender = sender
             };
@@ -47,7 +47,7 @@ namespace Zun010.UnityBridge
 
         internal void MouseUpAsButton(GameObject sender)
         {
-            var mouseUpAsButtonComponent = new MouseUpAsButtonComponent
+            var mouseUpAsButtonComponent = new MouseUpAsButtonEvent
             {
                 Sender = sender
             };

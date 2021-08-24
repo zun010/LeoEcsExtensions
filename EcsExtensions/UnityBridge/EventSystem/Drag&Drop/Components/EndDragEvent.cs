@@ -2,7 +2,7 @@
 
 namespace Zun010.UnityBridge
 {
-    public struct DragComponent
+    public struct EndDragEvent
     {
         public PointerEventData PointerEventData;
     }

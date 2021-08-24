@@ -6,10 +6,10 @@ namespace Zun010.UnityBridge
 {
     public class DestroyDragAndDropDataEntitySystem : IEcsRunSystem
     {
-        private readonly EcsFilter<BeginDragComponent> _beginDragFilter = null;
-        private readonly EcsFilter<EndDragComponent> _endDragFilter = null;
-        private readonly EcsFilter<DragComponent> _dragFilter = null;
-        private readonly EcsFilter<DropComponent> _dropFilter = null;
+        private readonly EcsFilter<BeginDragEvent> _beginDragFilter = null;
+        private readonly EcsFilter<EndDragEvent> _endDragFilter = null;
+        private readonly EcsFilter<DragEvent> _dragFilter = null;
+        private readonly EcsFilter<DropEvent> _dropFilter = null;
         
         private readonly Action<EcsEntity> _destroyEntityAction = 
             entity => entity.Destroy();

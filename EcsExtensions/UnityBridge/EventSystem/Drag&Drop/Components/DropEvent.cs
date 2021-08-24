@@ -2,9 +2,8 @@
 
 namespace Zun010.UnityBridge
 {
-    public struct PointerEnterComponent
+    public struct DropEvent
     {
-        // todo: remove all PointerEventData using
         public PointerEventData PointerEventData;
     }
 }
