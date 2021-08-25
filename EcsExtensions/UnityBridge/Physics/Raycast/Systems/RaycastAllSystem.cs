@@ -5,7 +5,7 @@ namespace Zun010.UnityBridge
 {
     public class RaycastAllSystem : IEcsRunSystem
     {
-        private readonly EcsFilter<RaycastAllRequest>.Exclude<RaycastAllResultComponent> _requestFilter = null;
+        private readonly EcsFilter<RaycastAllRequest> _requestFilter = null;
 
         public void Run()
         {

@@ -25,7 +25,9 @@ namespace Zun010.UnityBridge
                 .OneFrame<TriggerStayEvent>()
 
                 .OneFrame<RaycastRequest>()
-                .OneFrame<RaycastAllRequest>();
+                .OneFrame<RaycastResultComponent>()
+                .OneFrame<RaycastAllRequest>()
+                .OneFrame<RaycastAllResultComponent>();
         }
 
         public static void AddEventSystemBridgeSystemsTo(EcsSystems ecsSystems)
