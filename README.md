@@ -8,7 +8,6 @@ LeoEcsExtensions is a set of extensions for the LeoECS framework, such as UnityB
    * [Collision and Trigger detection](#collision-and-trigger-detection)
    * [EventSystem](#eventsystem)
    * [MonoBehaviour events](#monobehaviour-events)
-   * [2D Physics](#physycs2d-events)
    * [Raycasting](#raycasting)
 * [Conversion workflow](#conversion-workflow)
 
