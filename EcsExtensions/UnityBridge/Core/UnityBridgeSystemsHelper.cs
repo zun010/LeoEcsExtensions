@@ -7,6 +7,7 @@ namespace Zun010.UnityBridge
         public static void AddAllUnityBridgeSystemsTo(EcsSystems ecsSystems)
         {
             AddPhysicsBridgeSystemsTo(ecsSystems);
+            AddPhysics2dBridgeSystemsTo(ecsSystems);
             AddEventSystemBridgeSystemsTo(ecsSystems);
             AddMonoBehaviourEventsBridgeSystemsTo(ecsSystems);
 
@@ -31,7 +32,21 @@ namespace Zun010.UnityBridge
                 .OneFrame<RaycastAllRequest>()
                 .OneFrame<RaycastAllResultComponent>();
         }
+        
+        public static void AddPhysics2dBridgeSystemsTo(EcsSystems ecsSystems)
+        {
+            ecsSystems
+                .Add(new CreatePhysics2dBridgeSystem())
 
+                .OneFrame<CollisionEnter2dEvent>()
+                .OneFrame<CollisionExit2dEvent>()
+                .OneFrame<CollisionStay2dEvent>()
+
+                .OneFrame<TriggerEnter2dEvent>()
+                .OneFrame<TriggerExit2dEvent>()
+                .OneFrame<TriggerStay2dEvent>();
+        }
+        
         public static void AddEventSystemBridgeSystemsTo(EcsSystems ecsSystems)
         {
             ecsSystems
