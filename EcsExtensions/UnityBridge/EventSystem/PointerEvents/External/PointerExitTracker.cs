@@ -5,6 +5,6 @@ namespace Zun010.UnityBridge
     internal class PointerExitTracker : UnityBridgeTracker<EventSystemBridge>, IPointerExitHandler
     {
         public void OnPointerExit(PointerEventData eventData)
-            => Bridge.PointerExit(eventData);
+            => Bridge.PointerExit(gameObject, eventData);
     }
 }

@@ -9,6 +9,8 @@ namespace Zun010.UnityBridge
             AddPhysicsBridgeSystemsTo(ecsSystems);
             AddEventSystemBridgeSystemsTo(ecsSystems);
             AddMonoBehaviourEventsBridgeSystemsTo(ecsSystems);
+
+            ecsSystems.Add(new RemoveAllBridgesSystem());
         }
 
         public static void AddPhysicsBridgeSystemsTo(EcsSystems ecsSystems)

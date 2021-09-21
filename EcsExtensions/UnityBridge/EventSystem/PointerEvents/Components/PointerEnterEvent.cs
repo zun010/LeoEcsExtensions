@@ -1,10 +1,11 @@
-﻿using UnityEngine.EventSystems;
+﻿using UnityEngine;
+using UnityEngine.EventSystems;
 
 namespace Zun010.UnityBridge
 {
     public struct PointerEnterEvent
     {
-        // todo: remove all PointerEventData using
+        public GameObject Sender;
         public PointerEventData PointerEventData;
     }
 }
