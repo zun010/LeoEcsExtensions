@@ -5,32 +5,35 @@ namespace Zun010.UnityBridge
 {
     internal class PhysicsBridge : UnityBridge
     {
-        internal void CollisionEnter(Collision other)
+        internal void CollisionEnter(GameObject sender, Collision other)
         {
-            var collisionEnterComponent = new CollisionEnterComponent
+            var collisionEnterComponent = new CollisionEnterEvent
             {
-                Collider = other.collider,
+                Sender = sender,
+                OtherCollider = other.collider,
                 Impulse = other.impulse
             };
 
             World.NewEntityWith(collisionEnterComponent);
         }
 
-        internal void CollisionExit(Collision other)
+        internal void CollisionExit(GameObject sender, Collision other)
         {
-            var collisionExitComponent = new CollisionExitComponent
+            var collisionExitComponent = new CollisionExitEvent
             {
-                Collider = other.collider
+                Sender = sender,
+                OtherCollider = other.collider
             };
 
             World.NewEntityWith(collisionExitComponent);
         }
 
-        internal void CollisionStay(Collision other)
+        internal void CollisionStay(GameObject sender, Collision other)
         {
-            var collisionStayComponent = new CollisionStayComponent
+            var collisionStayComponent = new CollisionStayEvent
             {
-                Collider = other.collider
+                Sender = sender,
+                OtherCollider = other.collider
             };
 
             World.NewEntityWith(collisionStayComponent);
@@ -38,9 +41,9 @@ namespace Zun010.UnityBridge
 
         internal void TriggerEnter(Collider other)
         {
-            var triggerEnterComponent = new TriggerEnterComponent
+            var triggerEnterComponent = new TriggerEnterEvent
             {
-                Collider = other
+                OtherCollider = other
             };
 
             World.NewEntityWith(triggerEnterComponent);
@@ -48,9 +51,9 @@ namespace Zun010.UnityBridge
 
         internal void TriggerExit(Collider other)
         {
-            var triggerExitComponent = new TriggerExitComponent
+            var triggerExitComponent = new TriggerExitEvent
             {
-                Collider = other
+                OtherCollider = other
             };
 
             World.NewEntityWith(triggerExitComponent);
@@ -58,9 +61,9 @@ namespace Zun010.UnityBridge
         
         internal void TriggerStay(Collider other)
         {
-            var triggerStayComponent = new TriggerStayComponent
+            var triggerStayComponent = new TriggerStayEvent
             {
-                Collider = other
+                OtherCollider = other
             };
 
             World.NewEntityWith(triggerStayComponent);

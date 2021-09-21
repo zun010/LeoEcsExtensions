@@ -6,90 +6,99 @@ namespace Zun010.UnityBridge
 {
     internal class EventSystemBridge : UnityBridge
     {
-        internal void PointerEnter(PointerEventData pointerEventData)
+        internal void PointerEnter(GameObject sender, PointerEventData pointerEventData)
         {
-            var pointerEnterComponent = new PointerEnterComponent
+            var pointerEnterComponent = new PointerEnterEvent
             {
+                Sender = sender,
                 PointerEventData = pointerEventData
             };
 
             World.NewEntityWith(pointerEnterComponent);
         }
 
-        internal void PointerExit(PointerEventData pointerEventData)
+        internal void PointerExit(GameObject sender, PointerEventData pointerEventData)
         {
-            var pointerExitComponent = new PointerExitComponent
+            var pointerExitComponent = new PointerExitEvent
             {
+                Sender = sender,
                 PointerEventData = pointerEventData
             };
 
             World.NewEntityWith(pointerExitComponent);
         }
 
-        internal void PointerDown(PointerEventData pointerEventData)
+        internal void PointerDown(GameObject sender, PointerEventData pointerEventData)
         {
-            var pointerDownComponent = new PointerDownComponent
+            var pointerDownComponent = new PointerDownEvent
             {
+                Sender = sender,
                 PointerEventData = pointerEventData
             };
 
             World.NewEntityWith(pointerDownComponent);
         }
 
-        internal void PointerUp(PointerEventData pointerEventData)
+        internal void PointerUp(GameObject sender, PointerEventData pointerEventData)
         {
-            var pointerUpComponent = new PointerUpComponent
+            var pointerUpComponent = new PointerUpEvent
             {
+                Sender = sender,
                 PointerEventData = pointerEventData
             };
 
             World.NewEntityWith(pointerUpComponent);
         }
 
-        internal void PointerClick(PointerEventData pointerEventData)
+        internal void PointerClick(GameObject sender, PointerEventData pointerEventData)
         {
-            var pointerClickComponent = new PointerClickComponent
+            var pointerClickComponent = new PointerClickEvent
             {
+                Sender = sender,
                 PointerEventData = pointerEventData
             };
 
             World.NewEntityWith(pointerClickComponent);
         }
         
-        internal void BeginDrag(PointerEventData pointerEventData)
+        internal void BeginDrag(GameObject sender, PointerEventData pointerEventData)
         {
-            var beginDragComponent = new BeginDragComponent
+            var beginDragComponent = new BeginDragEvent
             {
+                Sender = sender,
                 PointerEventData = pointerEventData
             };
 
             World.NewEntityWith(beginDragComponent);
         }
         
-        internal void EndDrag(PointerEventData pointerEventData)
+        internal void EndDrag(GameObject sender, PointerEventData pointerEventData)
         {
-            var endDragComponent = new EndDragComponent
+            var endDragComponent = new EndDragEvent
             {
+                Sender = sender,
                 PointerEventData = pointerEventData
             };
 
             World.NewEntityWith(endDragComponent);
         }
         
-        internal void Drag(PointerEventData pointerEventData)
+        internal void Drag(GameObject sender, PointerEventData pointerEventData)
         {
-            var dragComponent = new DragComponent
+            var dragComponent = new DragEvent
             {
+                Sender = sender,
                 PointerEventData = pointerEventData
             };
 
             World.NewEntityWith(dragComponent);
         }
         
-        internal void Drop(PointerEventData pointerEventData)
+        internal void Drop(GameObject sender, PointerEventData pointerEventData)
         {
-            var dropComponent = new DropComponent
+            var dropComponent = new DropEvent
             {
+                Sender = sender,
                 PointerEventData = pointerEventData
             };
 
