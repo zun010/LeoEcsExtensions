@@ -10,7 +10,7 @@ namespace Zun010.UnityBridge
             var bridges = Object.FindObjectsOfType<UnityBridge>();
             foreach (var bridge in bridges)
             {
-                Object.Destroy(bridge.gameObject);
+                Object.DestroyImmediate(bridge.gameObject);
             }
         }
     }
