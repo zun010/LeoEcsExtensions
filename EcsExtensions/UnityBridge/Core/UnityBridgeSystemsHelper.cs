@@ -4,10 +4,13 @@ namespace Zun010.UnityBridge
 {
     public abstract partial class UnityBridge
     {
+        /// <summary>
+        /// This method does not call AddPhysics2dBridgeSystemsTo.
+        /// </summary>
+        /// <param name="ecsSystems"></param>
         public static void AddAllUnityBridgeSystemsTo(EcsSystems ecsSystems)
         {
             AddPhysicsBridgeSystemsTo(ecsSystems);
-            AddPhysics2dBridgeSystemsTo(ecsSystems);
             AddEventSystemBridgeSystemsTo(ecsSystems);
             AddMonoBehaviourEventsBridgeSystemsTo(ecsSystems);
 

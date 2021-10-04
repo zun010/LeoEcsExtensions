@@ -4,7 +4,7 @@ using Zun010.LeoEcsExtensions;
 
 namespace Zun010.UnityBridge
 {
-    internal class EventSystemBridge : UnityBridge
+    public class EventSystemBridge : UnityBridge
     {
         internal void PointerEnter(GameObject sender, PointerEventData pointerEventData)
         {

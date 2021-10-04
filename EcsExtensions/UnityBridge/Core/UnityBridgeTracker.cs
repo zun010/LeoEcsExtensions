@@ -2,7 +2,7 @@
 
 namespace Zun010.UnityBridge
 {
-    internal abstract class UnityBridgeTracker<T> : MonoBehaviour
+    public abstract class UnityBridgeTracker<T> : MonoBehaviour
         where T : UnityBridge
     {
         protected T Bridge;

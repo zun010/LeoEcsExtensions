@@ -1,6 +1,6 @@
 ﻿namespace Zun010.UnityBridge
 {
-    internal class MouseDownTracker : UnityBridgeTracker<MonoBehaviourEventsBridge>
+    public class MouseDownTracker : UnityBridgeTracker<MonoBehaviourEventsBridge>
     {
         private void OnMouseDown()
         {

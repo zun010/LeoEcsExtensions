@@ -3,7 +3,7 @@ using Zun010.LeoEcsExtensions;
 
 namespace Zun010.UnityBridge
 {
-    internal class MonoBehaviourEventsBridge : UnityBridge
+    public class MonoBehaviourEventsBridge : UnityBridge
     {
         internal void MouseEnter(GameObject sender)
         {

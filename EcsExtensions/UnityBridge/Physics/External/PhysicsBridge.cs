@@ -3,7 +3,7 @@ using Zun010.LeoEcsExtensions;
 
 namespace Zun010.UnityBridge
 {
-    internal class PhysicsBridge : UnityBridge
+    public sealed class PhysicsBridge : UnityBridge
     {
         internal void CollisionEnter(GameObject sender, Collision other)
         {
