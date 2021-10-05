@@ -21,14 +21,13 @@ namespace Zun010.UnityBridge
                 var distance = raycastComponent.Distance;
                 var layerMask = raycastComponent.LayerMask;
 
-                if (Physics.Raycast(ray, out var hit, distance, layerMask))
+                Physics.Raycast(ray, out var hit, distance, layerMask);
+                
+                var resultComponent = new RaycastResultComponent
                 {
-                    var resultComponent = new RaycastResultComponent
-                    {
-                        RaycastHit = hit
-                    };
-                    entity.Replace(resultComponent);
-                }
+                    RaycastHit = hit
+                };
+                entity.Replace(resultComponent);
             }
         }
     }
