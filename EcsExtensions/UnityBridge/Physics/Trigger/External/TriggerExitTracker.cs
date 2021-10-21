@@ -5,6 +5,6 @@ namespace Zun010.UnityBridge
     public class TriggerExitTracker : UnityBridgeTracker<PhysicsBridge>
     {
         private void OnTriggerExit(Collider other)
-            => Bridge.TriggerExit(other);
+            => Bridge.TriggerExit(gameObject, other);
     }
 }

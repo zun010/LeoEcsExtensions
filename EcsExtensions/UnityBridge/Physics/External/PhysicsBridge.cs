@@ -39,30 +39,33 @@ namespace Zun010.UnityBridge
             World.NewEntityWith(collisionStayComponent);
         }
 
-        internal void TriggerEnter(Collider other)
+        internal void TriggerEnter(GameObject sender, Collider other)
         {
             var triggerEnterComponent = new TriggerEnterEvent
             {
+                Sender = sender,
                 OtherCollider = other
             };
 
             World.NewEntityWith(triggerEnterComponent);
         }
 
-        internal void TriggerExit(Collider other)
+        internal void TriggerExit(GameObject sender, Collider other)
         {
             var triggerExitComponent = new TriggerExitEvent
             {
+                Sender = sender,
                 OtherCollider = other
             };
 
             World.NewEntityWith(triggerExitComponent);
         }
         
-        internal void TriggerStay(Collider other)
+        internal void TriggerStay(GameObject sender, Collider other)
         {
             var triggerStayComponent = new TriggerStayEvent
             {
+                Sender = sender,
                 OtherCollider = other
             };
 
