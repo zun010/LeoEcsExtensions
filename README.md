@@ -1,3 +1,6 @@
+### WARNING: THIS PACKAGE IS OBSOLETE! 
+For new projects use [EcsMonoLinks](https://github.com/zun010/ecs-mono-links).
+
 # LeoEcsExtensions
 LeoEcsExtensions is a set of extensions for the LeoECS framework, such as UnityBridge, Conversion workflow and others.
 
