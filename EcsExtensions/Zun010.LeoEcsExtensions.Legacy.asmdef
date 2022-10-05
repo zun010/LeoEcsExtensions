@@ -2,7 +2,8 @@
     "name": "Zun010.LeoEcsExtensions.Legacy",
     "rootNamespace": "",
     "references": [
-        "Leopotam.Ecs"
+        "Leopotam.Ecs",
+        "Zun010.LeoEcsExtensions"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],
