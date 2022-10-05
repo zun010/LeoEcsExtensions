@@ -1,5 +1,5 @@
 {
-    "name": "Zun010.LeoEcsExtensions",
+    "name": "Zun010.LeoEcsExtensions.Legacy",
     "rootNamespace": "",
     "references": [
         "Leopotam.Ecs"
